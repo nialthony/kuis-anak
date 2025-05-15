@@ -10,6 +10,9 @@
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(to bottom, #70c1ff, #ffd1dc);
             background-image: url('https://template.canva.com/EAE_FuzF75Q/1/0/1600w-vF48JG6BTyg.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -260,7 +263,7 @@
                     if (selected === correct) {
                         option.classList.add('correct');
                         score += 10;
-                        document.getElementById('score').innerText = `Skor: ${score}`;
+                        document.getElementById('score').innerText = `Biji: ${score}`;
                     } else {
                         option.classList.add('incorrect');
                     }
@@ -287,7 +290,7 @@
         document.getElementById('restart').addEventListener('click', () => {
             score = 0;
             answered.clear();
-            document.getElementById('score').innerText = 'Skor: 0';
+            document.getElementById('score').innerText = 'Biji: 0';
             document.getElementById('restart').style.display = 'none';
             createGrid();
         });
